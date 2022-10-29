@@ -143,7 +143,8 @@ map_model_to_preprocess = {
         'https://tfhub.dev/tensorflow/bert_en_uncased_preprocess/3',
 }
 
-
+# prac 3
+# https://www.tensorflow.org/hub/api_docs/python/hub/KerasLayer
 def get_bert_encoder(args):
     tfhub_handle_encoder = map_name_to_handle[args.bert_model_name]
     # 빈칸
@@ -152,6 +153,7 @@ def get_bert_encoder(args):
     return model
 
 
+# prac 3
 def get_bert_preprocess(args):
     tfhub_handle_preprocess = map_model_to_preprocess[args.bert_model_name]
     # 빈칸
