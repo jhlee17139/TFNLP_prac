@@ -118,9 +118,11 @@ class TransformerDecoderLayer(tf.keras.layers.Layer):
 
         self.layernorm1 = keras.layers.LayerNormalization(epsilon=1e-6)
         self.layernorm2 = keras.layers.LayerNormalization(epsilon=1e-6)
+        self.layernorm3 = keras.layers.LayerNormalization(epsilon=1e-6)
 
         self.dropout1 = tf.keras.layers.Dropout(rate)
         self.dropout2 = tf.keras.layers.Dropout(rate)
+        self.dropout3 = tf.keras.layers.Dropout(rate)
 
     def call(self, x_q, x_k, x_v):
         # 빈칸
